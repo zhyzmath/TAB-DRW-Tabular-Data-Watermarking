@@ -3,6 +3,7 @@
 TAB-DRW is a DFT-based robust watermark for generative tabular data. This repository provides an end-to-end pipeline built on TabSyn, including training, watermark embedding, detection, attacks, and evaluation.
 
 Implementation is based on [TabWak](https://github.com/chaoyitud/TabWak).
+This repository provides the code for "TAB-DRW: A DFT-based Robust Watermark for Generative Tabular Data" (https://arxiv.org/abs/2511.21600).
 
 ## Highlights
 - TabSyn VAE + diffusion training for tabular generation
