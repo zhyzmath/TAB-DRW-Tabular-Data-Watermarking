@@ -1,0 +1,234 @@
+{
+    "name": "drybean",
+    "task_type": "multiclass",
+    "header": "infer",
+    "column_names": [
+        "Area",
+        "Perimeter",
+        "MajorAxisLength",
+        "MinorAxisLength",
+        "AspectRation",
+        "Eccentricity",
+        "ConvexArea",
+        "EquivDiameter",
+        "Extent",
+        "Solidity",
+        "roundness",
+        "Compactness",
+        "ShapeFactor1",
+        "ShapeFactor2",
+        "ShapeFactor3",
+        "ShapeFactor4",
+        "Class"
+    ],
+    "num_col_idx": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+    ],
+    "dis_col_idx": [
+        0,
+        6,
+        16
+    ],
+    "cat_col_idx": [],
+    "target_col_idx": [
+        16
+    ],
+    "file_type": "xlsx",
+    "data_path": "data/drybean/Dry_Bean_Dataset.xlsx",
+    "test_path": null,
+    "column_info": {
+        "0": {},
+        "type": "categorical",
+        "max": 0.9997325300471389,
+        "min": 0.9476874027098624,
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {},
+        "categorizes": [
+            "BOMBAY",
+            "DERMASON",
+            "CALI",
+            "BARBUNYA",
+            "HOROZ",
+            "SIRA",
+            "SEKER"
+        ]
+    },
+    "train_num": 12249,
+    "test_num": 1362,
+    "idx_mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16
+    },
+    "inverse_idx_mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16
+    },
+    "idx_name_mapping": {
+        "0": "Area",
+        "1": "Perimeter",
+        "2": "MajorAxisLength",
+        "3": "MinorAxisLength",
+        "4": "AspectRation",
+        "5": "Eccentricity",
+        "6": "ConvexArea",
+        "7": "EquivDiameter",
+        "8": "Extent",
+        "9": "Solidity",
+        "10": "roundness",
+        "11": "Compactness",
+        "12": "ShapeFactor1",
+        "13": "ShapeFactor2",
+        "14": "ShapeFactor3",
+        "15": "ShapeFactor4",
+        "16": "Class"
+    },
+    "metadata": {
+        "columns": {
+            "0": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "1": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "2": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "3": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "4": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "5": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "6": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "7": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "8": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "9": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "10": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "11": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "12": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "13": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "14": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "15": {
+                "sdtype": "numerical",
+                "computer_representation": "Float"
+            },
+            "16": {
+                "sdtype": "categorical"
+            }
+        }
+    },
+    "key_col_idx": [
+        11,
+        13,
+        16
+    ],
+    "value_col_idx": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        11,
+        14
+    ],
+    "continuous_col_idx": [
+        1
+    ]
+}
