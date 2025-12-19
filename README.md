@@ -1,34 +1,9 @@
-# TAB-DRW
+# TAB-DRW: A DFT-based Robust Watermark for Generative Tabular Data
+[![arXiv](https://img.shields.io/badge/arXiv-2511.21600-b31b1b.svg)](https://arxiv.org/abs/2511.21600)
 
 TAB-DRW is a DFT-based robust watermark for generative tabular data. This repository provides an end-to-end pipeline built on TabSyn, including training, watermark embedding, detection, attacks, and evaluation.
 
 Implementation is based on [TabWak](https://github.com/chaoyitud/TabWak).
-This repository provides the code for "TAB-DRW: A DFT-based Robust Watermark for Generative Tabular Data" (https://arxiv.org/abs/2511.21600).
-
-## Highlights
-- TabSyn VAE + diffusion training for tabular generation
-- Watermark embedding during sampling and post-editing on generated tables
-- Detection with optional attack simulation
-- Evaluation scripts for density, detection, MLE, DCR, and quality metrics
-
-## Table of Contents
-- [TAB-DRW](#tab-drw)
-  - [Highlights](#highlights)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-    - [1. Create environment](#1-create-environment)
-    - [2. Install PyTorch](#2-install-pytorch)
-    - [3. Install dependencies](#3-install-dependencies)
-    - [Optional: quality metrics (synthcity)](#optional-quality-metrics-synthcity)
-  - [Datasets](#datasets)
-    - [Add a custom dataset](#add-a-custom-dataset)
-  - [Quickstart](#quickstart)
-  - [Training](#training)
-  - [Sampling and Watermarking](#sampling-and-watermarking)
-  - [Watermark Detection](#watermark-detection)
-  - [Attacks](#attacks)
-  - [Evaluation](#evaluation)
-  - [Outputs](#outputs)
 
 ## Installation
 
@@ -54,35 +29,20 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
-pip install wandb
 ```
 
-`wandb` is imported in training and sampling scripts; install it or remove the imports if you do not plan to log.
-
-### Optional: quality metrics (synthcity)
-`synthcity` is only needed for `eval/eval_quality.py`. We recommend a separate environment.
-```bash
-conda create -n synthcity python=3.10
-conda activate synthcity
-pip install synthcity category_encoders
-```
 
 ## Datasets
 
 Supported datasets from the paper:
-`adult`, `default`, `magic`, `shoppers`, `beijing`, `news`, `drybean`.
+`adult`, `default`, `magic`, `shoppers`, `drybean`.
 
-If the processed datasets are already present under `data/<name>/` (e.g., `info.json`, `train.csv`, `test.csv`, and `*.npy` files), you can skip the download and preprocessing steps below.
+The processed datasets are already present under `data/<name>/` (e.g., `info.json`, `train.csv`, `test.csv`, and `*.npy` files) in the current version, so you can skip the download and preprocessing steps below.
 
 Download and preprocess:
 ```bash
 python download_dataset.py
 python process_dataset.py
-```
-
-Process a single dataset:
-```bash
-python process_dataset.py --dataname adult
 ```
 
 ### Add a custom dataset
@@ -185,16 +145,6 @@ python eval/eval_detection.py --dataname [DATASET] --model tabsyn --path [SYN_CS
 Downstream utility (MLE):
 ```bash
 python eval/eval_mle.py --dataname [DATASET] --model tabsyn --path [SYN_CSV]
-```
-
-Distance to closest record (DCR):
-```bash
-python eval/eval_dcr.py --dataname [DATASET] --model tabsyn --path [SYN_CSV]
-```
-
-Quality metrics (synthcity, optional):
-```bash
-python eval/eval_quality.py --dataname [DATASET] --model tabsyn --path [SYN_CSV]
 ```
 
 If `--path` is omitted, the scripts default to `synthetic/<dataname>/<model>.csv`.
