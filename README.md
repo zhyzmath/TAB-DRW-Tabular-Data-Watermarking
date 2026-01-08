@@ -37,9 +37,9 @@ pip install -r requirements.txt
 Supported datasets from the paper:
 `adult`, `default`, `magic`, `shoppers`, `drybean`.
 
-The processed datasets are already present under `data/<name>/` (e.g., `info.json`, `train.csv`, `test.csv`, and `*.npy` files) in the current version, so you can skip the download and preprocessing steps below.
+The processed datasets are already present under `data/<name>/` (e.g., `info.json`, `train.csv`, `test.csv`, and `*.npy` files) in the current version, **so you can skip the download and preprocessing steps below**.
 
-Download and preprocess:
+Download and preprocess (Optional):
 ```bash
 python download_dataset.py
 python process_dataset.py
@@ -53,9 +53,6 @@ python process_dataset.py
 
 ## Quickstart
 ```bash
-python download_dataset.py
-python process_dataset.py
-
 python main.py --dataname adult --method vae --mode train
 python main.py --dataname adult --method tabsyn --mode train
 
